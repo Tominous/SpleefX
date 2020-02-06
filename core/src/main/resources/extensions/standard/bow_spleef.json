@@ -1,0 +1,209 @@
+{
+  "enabled": true,
+  "key": "bow_spleef",
+  "displayName": "&cBow Spleef",
+  "chatPrefix": "&7[&4Bow Spleef&7] ",
+  "preventItemDropping": true,
+  "giveDroppedItems": true,
+  "dropMinedBlocks": false,
+  "runCommandsForWinners": {
+    "1": {
+      "PLAYER": [],
+      "CONSOLE": []
+    }
+  },
+  "bounceArrows": false,
+  "doubleJump": {
+    "enabled": true,
+    "defaultAmount": 5,
+    "cooldownBetween": 2,
+    "playSoundOnJump": "ENTITY_WITHER_SHOOT",
+    "doubleJumpItems": {
+      "enabled": true,
+      "slot": 2,
+      "onAvailable": {
+        "type": "feather",
+        "count": 1,
+        "enchantments": [
+          "infinity:1"
+        ],
+        "displayName": "&a&lDouble Jump",
+        "lore": [],
+        "itemFlags": [
+          "HIDE_ENCHANTS"
+        ],
+        "unbreakable": false
+      },
+      "onUnavailable": {
+        "type": "feather",
+        "count": 1,
+        "enchantments": [
+          "infinity:1"
+        ],
+        "displayName": "&c&lDouble Jump",
+        "lore": [],
+        "itemFlags": [
+          "HIDE_ENCHANTS"
+        ],
+        "unbreakable": false
+      }
+    },
+    "launchVelocity": {
+      "x": 0,
+      "y": 1,
+      "z": 0,
+      "usePlayerOriginalVector": false,
+      "multiply": 1,
+      "divide": 1,
+      "addition": 0,
+      "subtract": 0
+    }
+  },
+  "tripleArrows": {
+    "enabled": true,
+    "defaultAmount": 5,
+    "actionsToTrigger": [
+      "LEFT_CLICK_AIR",
+      "LEFT_CLICK_BLOCK"
+    ],
+    "requiredMaterials": [
+      "BOW"
+    ],
+    "cooldown": 3
+  },
+  "removeTNTWhenPrimed": true,
+  "givePotionEffects": [
+    "REGENERATION:200000:4",
+    "SATURATION:200000:4"
+  ],
+  "itemsToAdd": {
+    "0": {
+      "type": "bow",
+      "count": 1,
+      "enchantments": [
+        "infinity:1",
+        "flame:1"
+      ],
+      "displayName": "{}",
+      "lore": [],
+      "itemFlags": [
+        "HIDE_ENCHANTS"
+      ],
+      "unbreakable": true
+    },
+    "8": {
+      "type": "arrow",
+      "count": 1,
+      "enchantments": [
+        "infinity:10"
+      ],
+      "displayName": "&a->",
+      "lore": [],
+      "itemFlags": [
+        "HIDE_ENCHANTS"
+      ],
+      "unbreakable": false
+    }
+  },
+  "gameTitles": {
+    "win": {
+      "enabled": true,
+      "title": "&e{winner} &1has won the game!",
+      "subtitle": "",
+      "fadeInTicks": 5,
+      "displayTicks": 20,
+      "fadeOutTicks": 5
+    },
+    "draw": {
+      "enabled": true,
+      "title": "&7Draw!",
+      "subtitle": "",
+      "fadeInTicks": 5,
+      "displayTicks": 20,
+      "fadeOutTicks": 5
+    },
+    "lose": {
+      "enabled": true,
+      "title": "&cYou have lost!",
+      "subtitle": "",
+      "fadeInTicks": 5,
+      "displayTicks": 20,
+      "fadeOutTicks": 5
+    }
+  },
+  "signs": [
+    "&7[&4Bow Spleef&7]",
+    "&1{arena_displayname}",
+    "&7(&9{arena_playercount}&8/&1{arena_maximum}&7)",
+    "{arena_stage}"
+  ],
+  "waitingMode": "ADVENTURE",
+  "ingameMode": "ADVENTURE",
+  "cancelledDamageInWaiting": [
+    "ENTITY_ATTACK",
+    "BLOCK_EXPLOSION",
+    "FALL",
+    "FIRE",
+    "FIRE_TICK",
+    "PROJECTILE"
+  ],
+  "cancelledDamageInGame": [
+    "ENTITY_ATTACK",
+    "BLOCK_EXPLOSION",
+    "FALL",
+    "FIRE",
+    "FIRE_TICK",
+    "PROJECTILE"
+  ],
+  "extensionCommands": [
+    "bowspleef"
+  ],
+  "allowedCommands": [],
+  "scoreboard": {
+    "WAITING": {
+      "enabled": true,
+      "title": "&c&lBOW SPLEEF",
+      "text": {
+        "6": "&eWaiting for players... ({arena_playercount}/{arena_maximum})",
+        "5": "",
+        "4": "&7Need at least &e{arena_minimum}",
+        "3": "&eplayers to start.",
+        "2": "",
+        "1": "       www.example.com"
+      }
+    },
+    "COUNTDOWN": {
+      "enabled": true,
+      "title": "&c&lBOW SPLEEF",
+      "text": {
+        "6": "&bThe game will",
+        "5": "&bstart in &e{countdown} &bsecond{plural}",
+        "4": "",
+        "3": "       www.example.com"
+      }
+    },
+    "ACTIVE": {
+      "enabled": true,
+      "title": "&c&lBOW SPLEEF",
+      "text": {
+        "7": "&ePlayers Alive: &7{arena_playercount}",
+        "6": "&eDouble Jumps: &7{double_jumps}/5",
+        "5": "&eTriple Arrows: &7{triple_arrows}/5",
+        "4": "",
+        "3": "&eTime left: &7{arena_time_left}",
+        "2": "",
+        "1": "       www.example.com"
+      }
+    }
+  },
+  "quitItemSlot": 0,
+  "quitItem": {
+    "type": "magma_cream",
+    "count": 1,
+    "enchantments": [],
+    "displayName": "&cLeave",
+    "lore": [],
+    "itemFlags": [],
+    "unbreakable": true
+  }
+}

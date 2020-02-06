@@ -1,0 +1,10 @@
+licenseheader.txt
+*dependency-reduced-pom.xml
+*nb-configuration.xml
+*target
+assets/
+*.bat
+*.iml
+.idea/
+target/
+test/

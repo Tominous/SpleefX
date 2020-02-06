@@ -1,0 +1,24 @@
+name: SpleefX
+version: ${project.version}
+main: io.github.spleefx.SpleefX
+authors: [Reflxction]
+api-version: "1.13"
+loadbefore:
+  - EpicRename
+  - GUIShop
+  - ShopGUIPlus
+softdepend:
+  - Vault
+  - WorldEdit
+  - WorldGuard
+  - WorldGuardExtraFlags
+  - PlaceholderAPI
+  - SpleefXSQL
+  - Multiverse-Core
+  - MultiWorld
+  - Essentials
+  - EssentialsX
+description: A powerful, feature-rich spleef plugin
+commands:
+  spleefx:
+    description: Main plugin command

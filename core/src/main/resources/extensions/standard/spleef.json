@@ -1,0 +1,187 @@
+{
+  "enabled": true,
+  "key": "spleef",
+  "displayName": "&9Spleef",
+  "chatPrefix": "&7[&bSpleef&7]&e ",
+  "preventItemDropping": true,
+  "giveDroppedItems": true,
+  "dropMinedBlocks": false,
+  "snowballSettings": {
+    "removeSnowballsGraduallyOnMelting": true,
+    "removalChance": "50%",
+    "allowThrowing": true,
+    "removedAmount": 2
+  },
+  "runCommandsForWinners": {
+    "1": {
+      "PLAYER": [],
+      "CONSOLE": []
+    }
+  },
+  "givePotionEffects": [
+    "REGENERATION:200000:4",
+    "SATURATION:200000:4"
+  ],
+  "doubleJump": {
+    "enabled": true,
+    "defaultAmount": 5,
+    "cooldownBetween": 2,
+    "playSoundOnJump": "ENTITY_WITHER_SHOOT",
+    "doubleJumpItems": {
+      "enabled": true,
+      "slot": 2,
+      "onAvailable": {
+        "type": "feather",
+        "count": 1,
+        "enchantments": [
+          "infinity:1"
+        ],
+        "displayName": "&a&lDouble Jump",
+        "lore": [],
+        "itemFlags": [
+          "HIDE_ENCHANTS"
+        ],
+        "unbreakable": false
+      },
+      "onUnavailable": {
+        "type": "feather",
+        "count": 1,
+        "enchantments": [
+          "infinity:1"
+        ],
+        "displayName": "&c&lDouble Jump",
+        "lore": [],
+        "itemFlags": [
+          "HIDE_ENCHANTS"
+        ],
+        "unbreakable": false
+      }
+    },
+    "launchVelocity": {
+      "x": 0,
+      "y": 1,
+      "z": 0,
+      "usePlayerOriginalVector": false,
+      "multiply": 1,
+      "divide": 1,
+      "addition": 0,
+      "subtract": 0
+    }
+  },
+  "itemsToAdd": {
+    "0": {
+      "type": "DIAMOND_SPADE",
+      "count": 1,
+      "enchantments": [
+        "dig_speed:1"
+      ],
+      "displayName": "&bDiamond Spade",
+      "lore": [],
+      "itemFlags": [
+        "HIDE_ENCHANTS"
+      ],
+      "durability": 0,
+      "unbreakable": true
+    }
+  },
+  "gameTitles": {
+    "win": {
+      "enabled": true,
+      "title": "",
+      "subtitle": "&e{winner} &ahas won the game!",
+      "fadeInTicks": 5,
+      "displayTicks": 20,
+      "fadeOutTicks": 5
+    },
+    "draw": {
+      "enabled": true,
+      "title": "&7Draw!",
+      "subtitle": "",
+      "fadeInTicks": 5,
+      "displayTicks": 20,
+      "fadeOutTicks": 5
+    },
+    "lose": {
+      "enabled": true,
+      "title": "&cYou have lost!",
+      "subtitle": "",
+      "fadeInTicks": 5,
+      "displayTicks": 20,
+      "fadeOutTicks": 5
+    }
+  },
+  "signs": [
+    "&7[&1Spleef&7]",
+    "&1{arena_displayname}",
+    "&7(&9{arena_playercount}&8/&1{arena_maximum}&7)",
+    "{arena_stage}"
+  ],
+  "waitingMode": "ADVENTURE",
+  "ingameMode": "SURVIVAL",
+  "cancelledDamageInWaiting": [
+    "ENTITY_ATTACK",
+    "BLOCK_EXPLOSION",
+    "FALL",
+    "FIRE",
+    "FIRE_TICK",
+    "PROJECTILE"
+  ],
+  "cancelledDamageInGame": [
+    "ENTITY_ATTACK",
+    "BLOCK_EXPLOSION",
+    "FALL",
+    "FIRE",
+    "FIRE_TICK"
+  ],
+  "extensionCommands": [
+    "spleef"
+  ],
+  "allowedCommands": [],
+  "scoreboard": {
+    "WAITING": {
+      "enabled": true,
+      "title": "&9&lSPLEEF",
+      "text": {
+        "6": "&eWaiting for players... ({arena_playercount}/{arena_maximum})",
+        "5": "",
+        "4": "&7Need at least &e{arena_minimum} players",
+        "3": "&eto start the game.",
+        "2": "",
+        "1": "       www.example.com"
+      }
+    },
+    "COUNTDOWN": {
+      "enabled": true,
+      "title": "&9&lSPLEEF",
+      "text": {
+        "6": "&bThe game will",
+        "5": "&bstart in &e{countdown} &bsecond{plural}",
+        "4": "",
+        "3": "       www.example.com"
+      }
+    },
+    "ACTIVE": {
+      "enabled": true,
+      "title": "&9&lSPLEEF",
+      "text": {
+        "6": "&ePlayers Alive: &7{arena_playercount}",
+        "5": "&eDouble Jumps: &7{double_jumps}/5",
+        "4": "",
+        "3": "&eTime left: &7{arena_time_left}",
+        "2": "",
+        "1": "       www.example.com"
+      }
+    }
+  },
+  "quitItemSlot": 0,
+  "quitItem": {
+    "type": "MAGMA_CREAM",
+    "count": 1,
+    "enchantments": [],
+    "displayName": "&cLeave",
+    "lore": [],
+    "itemFlags": [],
+    "durability": 0,
+    "unbreakable": true
+  }
+}

@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.spleefx</groupId>
+    <artifactId>parent</artifactId>
+    <version>3.4-BETA</version>
+    <packaging>pom</packaging>
+    <name>SpleefX</name>
+    <url>https://dre2n.github.io</url>
+    <description>A powerful, feature-rich spleef plugin</description>
+
+    <modules>
+        <!-- Protocol implementations -->
+        <module>1_8_R3</module> <!-- 1.8.8 -->
+        <module>1_9_R1</module> <!-- 1.9 - 1.9.2-->
+        <module>1_9_R2</module> <!-- 1.9.4 -->
+        <module>1_10_R1</module> <!-- 1.10 - 1.10.2 -->
+        <module>1_11_R1</module> <!-- 1.11 - 1.11.2 -->
+        <module>1_12_R1</module> <!-- 1.12 - 1.12.2 -->
+        <module>1_13_R1</module> <!-- 1.13 - 1.13.1 -->
+        <module>1_13_R2</module> <!-- 1.13.2 -->
+        <module>1_14_R1</module> <!-- 1.14 - 1.14.4 -->
+        <module>1_15_R1</module> <!-- 1.15 -->
+
+        <module>core</module>     <!--      Plugin core           -->
+        <module>legacy</module>   <!--  1.8-1.12.2 implementation -->
+        <module>modern</module>   <!--   1.13.X+ implementation   -->
+        <module>dist</module>     <!--    Distribution module     -->
+    </modules>
+</project>
