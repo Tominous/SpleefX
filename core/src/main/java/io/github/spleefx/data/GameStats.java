@@ -31,6 +31,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.IntFunction;
 import java.util.stream.Collectors;
 
@@ -41,7 +42,7 @@ import static io.github.spleefx.util.plugin.PluginSettings.ECO_USE_VAULT;
  */
 public class GameStats {
 
-    public static boolean VAULT_EXISTS = Bukkit.getPluginManager().getPlugin("Vault") != null;
+    public static final AtomicBoolean VAULT_EXISTS = new AtomicBoolean(Bukkit.getPluginManager().getPlugin("Vault") != null);
 
     public static final NumberFormat FORMAT = NumberFormat.getInstance(Locale.US);
 
@@ -140,7 +141,7 @@ public class GameStats {
      * @return The coins
      */
     public int getCoins(OfflinePlayer player) {
-        if ((boolean) ECO_USE_VAULT.get() && VAULT_EXISTS) {
+        if ((boolean) ECO_USE_VAULT.get() && VAULT_EXISTS.get()) {
             coins = (int) SpleefX.getPlugin().getVaultHandler().getCoins(player);
         }
         return coins;
@@ -165,7 +166,7 @@ public class GameStats {
     }
 
     public void takeCoins(OfflinePlayer player, int amount) {
-        if ((boolean) ECO_USE_VAULT.get() && VAULT_EXISTS) {
+        if ((boolean) ECO_USE_VAULT.get() && VAULT_EXISTS.get()) {
             SpleefX.getPlugin().getVaultHandler().withdraw(player, amount);
             return;
         }

@@ -68,7 +68,7 @@ public class CoinsSubcommand extends PluginSubcommand {
     @Override
     public boolean handle(Command command, CommandSender sender, String[] args) {
         if (!(sender instanceof Player)) throw new CommandException("&cYou must be a player to use this command!");
-        if (GameStats.VAULT_EXISTS && ((boolean) PluginSettings.ECO_USE_VAULT.get()) && !((boolean) PluginSettings.ECO_HOOK_INTO_VAULT.get()))
+        if (GameStats.VAULT_EXISTS.get() && ((boolean) PluginSettings.ECO_USE_VAULT.get()) && !((boolean) PluginSettings.ECO_HOOK_INTO_VAULT.get()))
             throw new CommandException("&cVault hook in config is set to true, and the economy is not SpleefX's, hence this command has been disabled. To edit a player's balance, use your standard Vault-based economy plugin.");
         OfflinePlayer target = args.length >= 2 ? Bukkit.getOfflinePlayer(args[1]) : null;
         int value = args.length >= 3 ? get(args[2]) : 0;
