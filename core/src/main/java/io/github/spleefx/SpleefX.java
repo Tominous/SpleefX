@@ -19,6 +19,7 @@ import io.github.spleefx.compatibility.worldedit.SchematicProcessor;
 import io.github.spleefx.converter.*;
 import io.github.spleefx.data.DataProvider;
 import io.github.spleefx.data.DataProvider.StorageType;
+import io.github.spleefx.data.GameStats;
 import io.github.spleefx.data.StatisticsConfig;
 import io.github.spleefx.economy.booster.ActiveBoosterLoader;
 import io.github.spleefx.economy.booster.BoosterConsumer;
@@ -28,11 +29,11 @@ import io.github.spleefx.extension.GameExtension;
 import io.github.spleefx.extension.ability.DoubleJumpHandler;
 import io.github.spleefx.extension.ability.GameAbility;
 import io.github.spleefx.extension.ability.TripleArrowsAbility;
+import io.github.spleefx.gui.MessageGUI.ChatListener;
 import io.github.spleefx.listeners.ArenaListener;
 import io.github.spleefx.listeners.ConnectionListener;
 import io.github.spleefx.listeners.RenameListener;
 import io.github.spleefx.listeners.SignListener;
-import io.github.spleefx.gui.MessageGUI.ChatListener;
 import io.github.spleefx.message.MessageKey;
 import io.github.spleefx.perk.GamePerk;
 import io.github.spleefx.perk.PerkShop;
@@ -301,7 +302,8 @@ public final class SpleefX extends JavaPlugin implements Listener {
             SpleefX.logger().warning("I noticed you're using UNITED_FILE as a storage type. This is no longer supported as it cannot work with all the new data it has to store. Player data has been converted to use FLAT_FILE instead.");
         }
 
-        vaultHandler = new VaultHandler(this);
+        if (GameStats.VAULT_EXISTS)
+            vaultHandler = new VaultHandler(this);
 
         Bukkit.getScheduler().runTaskTimer(this, () -> GameArena.ARENAS.get().values().forEach(arena -> arena.getEngine().getSignManager().update()),
                 ((Integer) PluginSettings.SIGN_UPDATE_INTERVAL.get()).longValue(), ((Integer) PluginSettings.SIGN_UPDATE_INTERVAL.get()).longValue());
