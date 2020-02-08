@@ -225,7 +225,6 @@ public abstract class BaseArenaEngine<R extends GameArena> implements ArenaEngin
         abilityCount.put(player.getUniqueId(), (EnumMap<GameAbility, Integer>)
                 MapBuilder.of(new EnumMap<GameAbility, Integer>(GameAbility.class))
                         .put(GameAbility.DOUBLE_JUMP, arena.getExtension().getDoubleJumpSettings().getDefaultAmount()).build());
-        displayScoreboard(p);
     }
 
     /**
